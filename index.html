@@ -8,11 +8,53 @@
     <title>Mero Convite</title>
 </head>
 <body>
-    <div class="container">
-    <h1 class="title">Por acaso a bela dama gostaria de andar<br>pra ver os botos com este mero sulistinha!</h1>
-    <button class="sim">sim!</button>
-    <button class="nao">não! (really?)</button>
-    <img class="gif_image_home" src="image/f06f944dd6ddd4758b406e8a030491d7.jpg">
-    </div>
-</body>
-</html>
+    <div id="conteudo">
+        <div class="content-wrapper">
+          <h2>
+            Por acaso gostaria de passear nos molhes
+            <br />
+            com este mero sulistinha?
+          </h2>
+          <div style="margin: auto; width: 170px;">
+            <button
+              style="position: fixed; display: block;"
+              class="btn"
+              onclick="sim()"
+            >
+              SIM
+            </button>
+            <button
+              class="btn"
+              onclick="desvia(this)"
+              onmouseover="desvia(this)"
+              style="position: absolute;"
+            >
+              NÃO
+            </button>
+          </div>
+        </div>
+      </div>
+    </body>
+    <script>
+        function sim() {
+            alert("hahaha vai tirar foto galopando no boto");
+            // redireciona para um URL após clicar no SIM
+            location.href = "https://open.spotify.com/intl-pt/track/5BLShRvEy6OQNXzkawWLvj?si=f97f5d2313d54693";
+        }
+    
+        function desvia(btn) {
+            // btn declarado na função
+            btn.style.position = 'absolute';
+            btn.style.bottom = geraPosicao(10, 90);
+            btn.style.left = geraPosicao(10, 90);
+            console.log('opa, desviei...');
+        }
+    
+        function geraPosicao(min, max) {
+            return (Math.random() * (max - min) + min) + "%";
+        }
+    
+    </script>
+    
+  </html>
+  
